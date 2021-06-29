@@ -4,7 +4,7 @@ Sequence models & Attention mechanism
 1. Consider using this encoder-decoder model for machine translation.
 This model is a “conditional language model” in the sense that the encoder portion (shown in green) is modeling the probability of the input sentence xx.
 
-	True
+	False
 
 2. In beam search, if you increase the beam width BB, which of the following would you expect to be true? Check all that apply.
 
@@ -33,7 +33,7 @@ Would you expect increasing the beam width B to help correct this example?
 6. Consider the attention model for machine translation. Further, here is the formula for α<t,t′>. Which of the following statements about α<t,t′> are true? Check all that apply.
 
 	We expect α<t,t′> to be generally larger for values of a<t′> that are highly relevant to the value the network should output for y^{<t>}. (Note the indices in the superscripts.)
-	∑tα<t,t′> = 1 (Note the summation is over tt.)
+	∑tα<t,t′> = 1 (Note the summation is over t')
 
 7. The network learns where to “pay attention” by learning the values e<t,t′>, which are computed using a small neural network:
 We can't replace s^{<t-1>} with s^{<t>} as an input to this neural network. This is because s^{<t>} depends on α<t,t′> which in turn depends on e<t,t′>; so at the time we need to evalute this network, we haven’t computed s^{<t>} yet.
@@ -44,9 +44,11 @@ We can't replace s^{<t-1>} with s^{<t>} as an input to this neural network. This
 
 	The input sequence length Tx is large.
 
-9. Under the CTC model, identical repeated characters not separated by the “blank” character (_) are collapsed. Under the CTC model, what does the following string collapse to? __c_oo_o_kk___b_ooooo__oo__kkk
+9. Question 9
+Under the CTC model, identical repeated characters not separated by the “blank” character (_) are collapsed. Under the CTC model, what does the following string collapse to?
+__c_oo_o_kk___b_ooooo__oo__kkk
 
-	coookkboooooookkk
+	cookbook
 
 10. In trigger word detection, x^{<t>) is:
 
